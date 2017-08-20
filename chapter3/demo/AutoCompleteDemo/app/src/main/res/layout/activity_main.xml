@@ -2,29 +2,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/activity_vertical_margin" >
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    >
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/message1"
-        android:textSize="20sp"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <AutoCompleteTextView
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:text="@string/message1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:gravity="left"
+            android:textSize="20sp"
+            android:background="@drawable/btn_shape"
+            android:textColor="@drawable/btn_color" />
 
-    <TextView
+        <AutoCompleteTextView
+            android:id="@+id/result1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#CD2626"
+            android:textSize="25sp"
+            android:completionThreshold="3"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/message2"
+            android:textSize="20sp"
+            android:background="@drawable/btn_shape"
+            android:textColor="@drawable/btn_color" />
+
+        <MultiAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/result2"
+            android:textSize="25sp"
+            android:textColor="#9400D3"
+            android:completionThreshold="3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/message2"
-        android:textSize="20sp"/>
+        android:orientation="horizontal"
+        android:gravity="right">
 
-    <MultiAutoCompleteTextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message3"
+            android:id="@+id/btn3"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message4"
+            android:id="@+id/btn4" />
+
+    </LinearLayout>
 
 </LinearLayout>
+

@@ -113,8 +113,23 @@ public class MainActivity extends AppCompatActivity {
     private void EqualsClicked(View v) {
         isTypingNumber = false;
         secondNum = Integer.parseInt(tvResult.getText().toString());
-        String result = String.valueOf(firstNum + secondNum);
-        tvResult.setText(result);
+        if (operatorString.equals("+")) {
+            String result = String.valueOf(firstNum + secondNum);
+            tvResult.setText(result);
+        }else if (operatorString.equals("-")) {
+            String result = String.valueOf(firstNum - secondNum);
+            tvResult.setText(result);
+        }else if (operatorString.equals("*")) {
+            String result = String.valueOf(firstNum * secondNum);
+            tvResult.setText(result);
+        }else if (operatorString.equals("/")) {
+            if (secondNum == 0 ) {
+                return;
+            }else {
+                String result =String.valueOf(firstNum / secondNum);
+                tvResult.setText(result);
+            } 
+        }
     }
 
     private void OperatorClicked(View v) {

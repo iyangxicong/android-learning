@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             }else {
                 String result =String.valueOf(firstNum / secondNum);
                 tvResult.setText(result);
-            } 
+            }
         }
     }
 

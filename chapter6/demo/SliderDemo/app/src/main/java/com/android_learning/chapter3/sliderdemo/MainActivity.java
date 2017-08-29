@@ -1,7 +1,6 @@
 package com.android_learning.chapter3.sliderdemo;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RatingBar;

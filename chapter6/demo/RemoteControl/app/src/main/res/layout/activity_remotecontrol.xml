@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 第1个TableLayout，我的电视-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+        <TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/t2"
+                android:text="@string/text2"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"/>
+
+            <TextView
+
+                android:id="@+id/t10"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t1"
+                android:text="@string/text1"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/t3"
+                android:text="@string/text3"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/t11"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"/>
+            <TextView
+                android:id="@+id/t4"
+                android:text="@string/text4"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/t12"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+    <!-- 第2层，我的遥控器，用一个文本控件-->
+    <TextView
+        android:id="@+id/t5"
+        android:text="@string/text5"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!--第3层，电源，开关;音量，拖动条-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/t6"
+                android:text="@string/text6"
+                android:textSize="20sp"/>
+            <Switch
+                android:id="@+id/sw"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:onClick="onSwitchClicked"
+                android:tag="sw"
+                android:showText="true"
+                android:textOff="N"
+                android:textOn="Y"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:id="@+id/t7"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text7"
+                android:textSize="20sp"/>
+
+            <SeekBar
+                android:id="@+id/sb"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:onClick="onSeekBatClicked"
+                android:max="100"/>
+        </TableRow>
+    </TableLayout>
+
+    <!-- 第4层，电视频道-->
+    <TableLayout
+        android:id="@+id/table3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/t8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="@string/text8"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/bn1"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn1"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bn2"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn2"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn3"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn3"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/bn4"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn4"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn5"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn5"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bn6"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn6"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/bn7"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn7"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn8"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn8"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn9"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn9"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/bn10"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn10"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bn11"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn11"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bn12"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn12"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/t9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="@string/text9"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/bn13"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn13"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn14"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn14"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/bn15"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/btn15"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
